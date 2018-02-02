@@ -1,0 +1,9 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+<hr>
+  {% for tapas in TablaTapas %}
+  <h1>{{tapas.nombre}}</h1>
+  - <a href="{{ path('eliminar_campo', {'id': tapas.id} ) }}"> Borrar</a>
+  - <a href="{{ path('mostrar_una_tapa', {'id': tapas.id} ) }}"> Mas info</a>
+  {% endfor %}
+{% endblock %}
